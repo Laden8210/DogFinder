@@ -115,6 +115,7 @@ public class PostTask extends AsyncTask<JSONObject, String, String> {
                 } catch (JSONException e) {
                     Log.d("PostTask", "Error: " + result);
                     e.printStackTrace();
+                    callback.onPostError("An error occurred during request!");
                 }
                 return;
             }
